@@ -45,7 +45,7 @@ yesBtn.addEventListener("click", () => {
       font-family: Arial, sans-serif;
       text-align: center;
     ">
-      <h1 style="color: white; font-size: 60px;">nyeheyy i love you 🥺</h1>
+      <h1 style="color: white; font-size: 60px;">nyeheyy i love you🥺</h1>
       <img src="valentine.jpeg" 
            alt="Valentine Kitten" 
            style="max-width: 50%; border-radius: 15px; margin-top: 20px;">
