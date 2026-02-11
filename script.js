@@ -31,35 +31,35 @@ noBtn.addEventListener("mouseover", () => {
 
 // YES button celebration
 yesBtn.addEventListener("click", () => {
-  // Replace body content
   document.body.innerHTML = `
-    <div style="text-align: center; margin-top: 50px; color: hotpink; font-family: Arial, sans-serif;">
+    <div style="
+      text-align: center; 
+      margin-top: 50px; 
+      color: #ffffff; /* white text for contrast */
+      font-family: Arial, sans-serif;
+      text-shadow: 2px 2px 5px #ff69b4; /* soft pink glow behind text */
+    ">
       <h1>nyeheyy 💖</h1>
       <img src="valentine.jpeg" 
-           alt="Valentine" 
+           alt="Valentine Kitten" 
            style="max-width: 50%; border-radius: 15px; margin-top: 20px;">
     </div>
   `;
 
-  // UTF-8-safe flower emojis
-  const flowerEmojis = ["\uD83C\uDF38", "\uD83C\uDF3A", "\uD83C\uDF3C", "\uD83D\uDC90"];
-
+  // Flower raining effect...
   function createFlower() {
     const flower = document.createElement("div");
-    flower.innerText = flowerEmojis[Math.floor(Math.random() * flowerEmojis.length)];
+    flower.innerText = "🌸";
     flower.style.position = "fixed";
     flower.style.left = Math.random() * window.innerWidth + "px";
     flower.style.top = "-50px";
     flower.style.fontSize = Math.random() * 30 + 20 + "px";
     flower.style.pointerEvents = "none";
     flower.style.zIndex = 9999;
-    flower.style.userSelect = "none";
     document.body.appendChild(flower);
 
-    let dx = (Math.random() - 0.5) * 2; // side-to-side drift
     let fall = setInterval(() => {
-      flower.style.top = parseInt(flower.style.top) + 3 + "px";
-      flower.style.left = parseFloat(flower.style.left) + dx + "px";
+      flower.style.top = parseInt(flower.style.top) + 5 + "px";
       if (parseInt(flower.style.top) > window.innerHeight) {
         clearInterval(fall);
         flower.remove();
@@ -67,8 +67,7 @@ yesBtn.addEventListener("click", () => {
     }, 30);
   }
 
-  // Create 50 flowers
   for (let i = 0; i < 50; i++) {
-    setTimeout(createFlower, i * 100);
+    setTimeout(createFlower, i * 150);
   }
 });
