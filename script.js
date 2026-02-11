@@ -35,9 +35,8 @@ yesBtn.addEventListener("click", () => {
     <div style="
       text-align: center; 
       margin-top: 50px; 
-      color: #ffffff; /* white text for contrast */
+      color: red; /* make text red */
       font-family: Arial, sans-serif;
-      text-shadow: 2px 2px 5px #ff69b4; /* soft pink glow behind text */
     ">
       <h1>nyeheyy 💖</h1>
       <img src="valentine.jpeg" 
@@ -46,7 +45,7 @@ yesBtn.addEventListener("click", () => {
     </div>
   `;
 
-  // Flower raining effect...
+  // Flower raining effect
   function createFlower() {
     const flower = document.createElement("div");
     flower.innerText = "🌸";
@@ -66,6 +65,12 @@ yesBtn.addEventListener("click", () => {
       }
     }, 30);
   }
+
+  for (let i = 0; i < 50; i++) {
+    setTimeout(createFlower, i * 150);
+  }
+});
+
 
   for (let i = 0; i < 50; i++) {
     setTimeout(createFlower, i * 150);
