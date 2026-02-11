@@ -31,16 +31,21 @@ noBtn.addEventListener("mouseover", () => {
 
 // YES button celebration
 yesBtn.addEventListener("click", () => {
+  // Clear the body and add a container that fills the screen
   document.body.innerHTML = `
     <div style="
-      text-align: center; 
-      margin-top: 50px; 
-      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100vw;
       background-color: #ff4d6d; /* pink background */
-      height: 100vh; /* fill screen */
-      color: white; /* make text white */
+      color: white; /* text color white */
+      font-family: Arial, sans-serif;
+      text-align: center;
     ">
-      <h1 style="color: white;">nyeheyy 💖</h1>
+      <h1 style="color: white; font-size: 60px;">nyeheyy 💖</h1>
       <img src="valentine.jpeg" 
            alt="Valentine Kitten" 
            style="max-width: 50%; border-radius: 15px; margin-top: 20px;">
@@ -72,3 +77,4 @@ yesBtn.addEventListener("click", () => {
     setTimeout(createFlower, i * 150);
   }
 });
+
