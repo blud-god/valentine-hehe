@@ -1,0 +1,74 @@
+const noBtn = document.getElementById("no");
+const yesBtn = document.getElementById("yes");
+const question = document.getElementById("question");
+
+let messages = [
+  "nowp",
+  "bleh",
+  "niooo",
+  "pls",
+  "pls nio"
+];
+
+let index = 0;
+
+// NO button chaos (fixed)
+noBtn.addEventListener("mouseover", () => {
+  const btnWidth = noBtn.offsetWidth;
+  const btnHeight = noBtn.offsetHeight;
+
+  const maxX = window.innerWidth - btnWidth - 10; // prevent overflow
+  const maxY = window.innerHeight - btnHeight - 10;
+
+  noBtn.style.position = "absolute";
+  noBtn.style.left = Math.random() * maxX + "px";
+  noBtn.style.top = Math.random() * maxY + "px";
+
+  noBtn.innerText = messages[index % messages.length];
+  index++;
+});
+
+
+// YES button celebration
+yesBtn.addEventListener("click", () => {
+  // Replace body content
+  document.body.innerHTML = `
+    <div style="text-align: center; margin-top: 50px; color: hotpink; font-family: Arial, sans-serif;">
+      <h1>nyeheyy 💖</h1>
+      <img src="valentine.jpeg" 
+           alt="Valentine" 
+           style="max-width: 50%; border-radius: 15px; margin-top: 20px;">
+    </div>
+  `;
+
+  // UTF-8-safe flower emojis
+  const flowerEmojis = ["\uD83C\uDF38", "\uD83C\uDF3A", "\uD83C\uDF3C", "\uD83D\uDC90"];
+
+  function createFlower() {
+    const flower = document.createElement("div");
+    flower.innerText = flowerEmojis[Math.floor(Math.random() * flowerEmojis.length)];
+    flower.style.position = "fixed";
+    flower.style.left = Math.random() * window.innerWidth + "px";
+    flower.style.top = "-50px";
+    flower.style.fontSize = Math.random() * 30 + 20 + "px";
+    flower.style.pointerEvents = "none";
+    flower.style.zIndex = 9999;
+    flower.style.userSelect = "none";
+    document.body.appendChild(flower);
+
+    let dx = (Math.random() - 0.5) * 2; // side-to-side drift
+    let fall = setInterval(() => {
+      flower.style.top = parseInt(flower.style.top) + 3 + "px";
+      flower.style.left = parseFloat(flower.style.left) + dx + "px";
+      if (parseInt(flower.style.top) > window.innerHeight) {
+        clearInterval(fall);
+        flower.remove();
+      }
+    }, 30);
+  }
+
+  // Create 50 flowers
+  for (let i = 0; i < 50; i++) {
+    setTimeout(createFlower, i * 100);
+  }
+});

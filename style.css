@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #ffb6c1, #ff69b4, #ff1493); /* soft pink gradient */
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+}
+
+button {
+  padding: 15px 30px;
+  margin: 10px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#yes {
+  background: #ff4d4d; /* bright red */
+  color: white;
+}
+
+#no {
+  background: #cc0000; /* darker red */
+  color: white;
+}
+
