@@ -38,9 +38,9 @@ yesBtn.addEventListener("click", () => {
       font-family: Arial, sans-serif;
       background-color: #ff4d6d; /* pink background */
       height: 100vh; /* fill screen */
-      color: red; /* force text red */
+      color: white; /* make text white */
     ">
-      <h1 style="color: red;">nyeheyy 💖</h1>
+      <h1 style="color: white;">nyeheyy 💖</h1>
       <img src="valentine.jpeg" 
            alt="Valentine Kitten" 
            style="max-width: 50%; border-radius: 15px; margin-top: 20px;">
