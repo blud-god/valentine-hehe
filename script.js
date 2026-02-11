@@ -35,10 +35,9 @@ yesBtn.addEventListener("click", () => {
     <div style="
       text-align: center; 
       margin-top: 50px; 
-      color: red; /* make text red */
       font-family: Arial, sans-serif;
     ">
-      <h1>nyeheyy 💖</h1>
+      <h1 style="color: red !important;">nyeheyy 💖</h1>
       <img src="valentine.jpeg" 
            alt="Valentine Kitten" 
            style="max-width: 50%; border-radius: 15px; margin-top: 20px;">
@@ -71,8 +70,3 @@ yesBtn.addEventListener("click", () => {
   }
 });
 
-
-  for (let i = 0; i < 50; i++) {
-    setTimeout(createFlower, i * 150);
-  }
-});
